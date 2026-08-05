@@ -23,7 +23,5 @@ jobs:
           npm ci
           npm run build
 
-      - name: Restart services
-        run: |
-          nssm restart XAUBackend
-          nssm restart MT5Bridge
+      - name: Restart backend service
+        run: sudo systemctl restart xau-backend

@@ -4,7 +4,8 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/root/actions-runner/_work/Forex/Forex/backend
+User=runner
+WorkingDirectory=/home/runner/actions-runner/_work/Forex/Forex/backend
 ExecStart=/usr/bin/node server.js
 Restart=always
 RestartSec=5

@@ -1,12 +1,8 @@
 # Reverse proxy + automatic HTTPS (Let's Encrypt) for the XAU/USD app.
-# Install Caddy on the VPS, put this file next to caddy.exe, then run:
-#   caddy run
-# (or install as a Windows service: `caddy run --config Caddyfile` via NSSM)
-#
-# Replace the placeholder below with your real domain — Caddy needs a domain
-# name (not a bare IP) to issue a certificate. Point the domain's DNS A record
-# at the VPS's public IP before starting Caddy.
+# Runs as the system Caddy service on the VPS (see deploy runbook).
+# Requires the domain's DNS A record to point at the VPS's public IP
+# before Caddy will succeed in issuing a certificate.
 
-your-domain.com {
+bestpainters.ca {
     reverse_proxy localhost:8000
 }

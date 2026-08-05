@@ -1,0 +1,14 @@
+node_modules/
+frontend/dist/
+frontend/dev.log
+
+# Secrets — never commit
+backend/.env
+
+# Runtime state — written by the running app; CI must never overwrite these
+# on a live deploy, so they're excluded rather than tracked.
+backend/journal.json
+backend/risk_state.json
+backend/signal_performance.json
+backend/news_lockout.json
+backend/app_settings.json
